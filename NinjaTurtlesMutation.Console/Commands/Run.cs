@@ -142,17 +142,17 @@ Example:
                     return false;
                 }
             }
-            var isAdmin = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
-            if (!isAdmin)
-            {
-                using (new OutputWriterErrorHighlight())
-                {
-                    OutputWriter.WriteLine(
-                        OutputVerbosity.Quiet,
-                        @"The 'run' command need admin privilege to create symlink.");
-                }
-                return false;
-            }
+            //var isAdmin = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
+            //if (!isAdmin)
+            //{
+            //    using (new OutputWriterErrorHighlight())
+            //    {
+            //        OutputWriter.WriteLine(
+            //            OutputVerbosity.Quiet,
+            //            @"The 'run' command need admin privilege to create symlink.");
+            //    }
+            //    return false;
+            //}
             if (Options.Options.Any(o => o is NoPreTest))
                 return true;
             var benchmark = new TestsBenchmark(_testAssemblyLocation);
