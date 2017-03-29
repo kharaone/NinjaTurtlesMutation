@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NinjaTurtlesMutation.ManagedTestRunners;
-using NUnit.Core;
+using NUnit.Framework.Internal;
 
 namespace NinjaTurtlesMutation.AppDomainIsolation.Adaptor
 {
@@ -29,7 +29,7 @@ namespace NinjaTurtlesMutation.AppDomainIsolation.Adaptor
             return _runner.WaitForExit(ms);
         }
 
-        public TestResult Result
+		public System.Xml.XmlNode Result
         {
             get { return _runner.Result; }
         }
